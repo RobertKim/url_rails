@@ -1,0 +1,8 @@
+<h1> THIS IS THE URLS INDEX </h1>
+<h2> <%= link_to("Go to the Shortener", new_url_path) %> </h2>
+
+<ul>
+<% @urls.each do |url| %>
+	<li><%= url.original %>: <%= link_to(url.shortened, url_path(url) )  %></li>
+	<% end %>
+</ul>
